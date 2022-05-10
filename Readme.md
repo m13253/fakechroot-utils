@@ -25,6 +25,11 @@ Suitable for setting up your work environment on a shared lab machine, running o
    **Docs:**
    * [docs/vscode-remote.md](docs/vscode-remote.md)
 
+4. **Issue:** `man` shows error message: “error while loading shared libraries”
+
+   **Docs:**
+   * [docs/man-apparmor.md](docs/man-apparmor.md)
+
 ## License
 
 Licensed under WTFPL, version 2.
