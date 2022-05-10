@@ -18,4 +18,4 @@ exec bwrap --unshare-all --share-net --bind "$CHROOT_PATH" / --bind / /mnt/outsi
 
 # If bubblewrap is unavailable, try proot (https://proot-me.github.io/)
 # It has lower performance than bubblewrap.
-exec proot -r "$CHROOT_PATH" -b /dev/ -b /sys/ -b /proc/ -b /tmp/ -b /:/mnt/outside "$@"
+exec proot -r "$CHROOT_PATH" -b /:/mnt/outside -b /dev/ -b /sys/ -b /proc/ -b /tmp/ "$@"
