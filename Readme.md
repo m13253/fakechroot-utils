@@ -1,10 +1,8 @@
 # fakechroot.sh
 
 Chroot without root privilege on shared system.
-Suitable for setting up your work environment on a shared lab machine, running old Ubuntu or CentOS.
 
-Licensed under WTFPL, version 2.
-License terms available at: <http://www.wtfpl.net/about/>.
+Suitable for setting up your work environment on a shared lab machine, running old Ubuntu or CentOS.
 
 ## Index
 
@@ -22,3 +20,10 @@ License terms available at: <http://www.wtfpl.net/about/>.
    * [scripts/clear-env.bash](scripts/clear-env.bash)
    * [scripts/clear-env.fish](scripts/clear-env.fish)
 
+## License
+
+Licensed under WTFPL, version 2.
+
+License terms available at: <http://www.wtfpl.net/about/>.
+
+If you benefit from this program, please consider writing a blog post to introduce this method.
