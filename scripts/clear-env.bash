@@ -7,6 +7,7 @@
 if [[ $- = *i* ]]
 then
     export PATH=/usr/local/sbin:/usr/local/bin/:/usr/bin
+    export SHELL=/bin/bash
     while read VAR_NAME
     do
         unset "$VAR_NAME"

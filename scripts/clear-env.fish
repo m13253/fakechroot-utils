@@ -6,6 +6,7 @@
 
 if status is-interactive
     set -x PATH /usr/local/sbin /usr/local/bin/ /usr/bin
+    set -x SHELL /usr/bin/fish
     env | cut -d = -f 1 | string match -r -v '^(?:EDITOR|HOME|LANG|LC_.*|PAGER|PATH|PWD|SHELL|SHLVL|SSH_.*|TERM|TZ|USER)$' |
     while read VAR_NAME
         set -e $VAR_NAME

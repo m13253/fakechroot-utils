@@ -20,6 +20,11 @@ Suitable for setting up your work environment on a shared lab machine, running o
    * [scripts/clear-env.bash](scripts/clear-env.bash)
    * [scripts/clear-env.fish](scripts/clear-env.fish)
 
+3. **Task:** Use Visual Studio Code to connect to the remote chroot environment via SSH.
+
+   **Docs:**
+   * [docs/vscode-remote.md](docs/vscode-remote.md)
+
 ## License
 
 Licensed under WTFPL, version 2.
