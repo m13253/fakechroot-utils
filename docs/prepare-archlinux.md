@@ -25,20 +25,22 @@
 
     If it is not installed by your system administrator, you may statically compile it yourself, or extract it from a DEB file from [packages.ubuntu.com](https://packages.ubuntu.com/).
 
-    * Bubblewrap relies on Linux kernel namespace feature, which may not be available on older systems, or not enabled to you.
+    * **Bubblewrap** relies on Linux kernel namespace feature, which may not be available on older systems, or not enabled to you.
 
-      Build dependency:
+      **Build dependency:**
       * cmake
       * meson (Optional)
-      Runtime dependency:
+
+      **Runtime dependency:**
       * glibc
       * libcap
 
-    * Proot relies on Linux kernel ptrace feature, which has lower performance than bubblewrap, but widely available.
+    * **Proot** relies on Linux kernel ptrace feature, which has lower performance than bubblewrap, but widely available.
 
-      Build dependency:
+      **Build dependency:**
       * None, just download the official pre-compiled binary.
-      Runtime dependency:
+
+      **Runtime dependency:**
       * None, statically linked.
 
 8.  Use this `fakechroot.sh` script, but add either `--uid 0 --gid 0` for bubblewrap backend, or `-0` for proot backend, in order to also give you fakeroot.
