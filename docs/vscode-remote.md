@@ -20,4 +20,8 @@
    * Remote.SSH: Enable Remote Command: Yes
    * Remote.SSH: Use Local Server: Yes
 
-5. In Visual Studio Code, when you want to connect to the remote host, choose the host alias you created in step 3.
+5. In Visual Studio Code, when you want to connect to the remote host:
+
+   * Click the “Open a Remote Window” button on the left bottom corner.
+   * Select “Connect to Host… (Remote-SSH)”
+   * Choose the host alias you created in step 3.
