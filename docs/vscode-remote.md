@@ -9,16 +9,17 @@
    ```etc
    Host <my_host_alias>
        HostName <original_ssh_host_name>
-       RequestTTY force
+       User <my_user_name_on_server>
        RemoteCommand exec ~/fakechroot.sh /bin/bash
+       RequestTTY force
    ```
 
    Change `<my_host_alias>` to whatever name you want, and `<original_ssh_host_name>` to the original SSH host name you want to connect to.
 
 4. In Visual Studio Code, change the following settings:
 
-   * Remote.SSH: Enable Remote Command: Yes
-   * Remote.SSH: Use Local Server: Yes
+   * Remote.SSH: **Enable Remote Command:** Yes
+   * Remote.SSH: **Use Local Server:** Yes
 
 5. In Visual Studio Code, when you want to connect to the remote host:
 
