@@ -27,20 +27,20 @@
 
     * **Bubblewrap** relies on Linux kernel namespace feature, which may not be available on older systems, or not enabled to you.
 
-      **Build dependency:**
+      **Build dependencies:**
       * cmake
       * meson (Optional)
 
-      **Runtime dependency:**
+      **Runtime dependencies:**
       * glibc
       * libcap
 
     * **Proot** relies on Linux kernel ptrace feature, which has lower performance than bubblewrap, but widely available.
 
-      **Build dependency:**
+      **Build dependencies:**
       * None, just download the official pre-compiled binary.
 
-      **Runtime dependency:**
+      **Runtime dependencies:**
       * None, statically linked.
 
 8.  Use this `fakechroot.sh` script, but add either `--uid 0 --gid 0` for bubblewrap backend, or `-0` for proot backend, in order to also give you fakeroot.
