@@ -14,8 +14,8 @@
 CHROOT_PATH="$HOME/archlinux/root.x86_64"
 
 # Use bubblewrap (https://github.com/containers/bubblewrap)
-exec bwrap --unshare-all --share-net --bind "$CHROOT_PATH" / --bind / /mnt/outside --bind /sys /sys --bind /tmp /tmp --dev /dev --proc /proc "$@"
+exec bwrap --unshare-user-try --unshare-ipc --unshare-pid --unshare-uts --unshare-cgroup-try --hostname archlinux --dev-bind "$CHROOT_PATH" / --dev-bind / /mnt/outside --dev-bind /sys /sys --dev-bind /tmp /tmp --dev-bind /run/shm /run/shm --dev /dev --proc /proc "$@"
 
 # If bubblewrap is unavailable, try proot (https://proot-me.github.io/)
 # It has lower performance than bubblewrap.
-exec proot -r "$CHROOT_PATH" -b /:/mnt/outside -b /dev/ -b /sys/ -b /proc/ -b /tmp/ "$@"
+exec proot -r "$CHROOT_PATH" -b /:/mnt/outside -b /dev/ -b /sys/ -b /proc/ -b /tmp/ -b /run/shm "$@"
