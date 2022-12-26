@@ -23,6 +23,6 @@ exec "$BWRAP_PATH" --unshare-user-try --unshare-ipc --unshare-pid --unshare-uts 
 
 # If bubblewrap is unavailable, try proot (https://proot-me.github.io/)
 # It has lower performance than bubblewrap.
-# Note 1: If the host machine does not have /run/shm, remove "-b /run/shm"
-# Note 2: For SIGSEGV issue, check https://github.com/proot-me/proot/issues/336 (December 2022)
+# Note 1: If the host machine does not have /run/shm, remove "-b /run/shm".
+# Note 2: For SIGSEGV issue, check https://github.com/proot-me/proot/issues/336 (December 2022).
 exec "$PROOT_PATH" -r "$CHROOT_PATH" -b /:/mnt/outside -b /dev/ -b /sys/ -b /proc/ -b /tmp/ -b /run/shm "$@"
