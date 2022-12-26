@@ -51,7 +51,8 @@
     # locale-gen
     # pacman-key --init
     # pacman-key --populate archlinux
-    # pacman -Syu
+    # pacman -Sy archlinux-keyring
+    # pacman -Su
     ```
 
 10. Inside the chroot, install “[fake-sudo](https://aur.archlinux.org/packages/fake-sudo)” from AUR.
