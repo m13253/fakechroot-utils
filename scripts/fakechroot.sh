@@ -17,8 +17,9 @@ CHROOT_PATH="$HOME/archlinux/root.x86_64"
 # for example, "$HOME/.local/opt/bubblewrap/usr/bin/bwrap", "$HOME/.local/bin/proot".
 BWRAP_PATH="bwrap"
 PROOT_PATH="proot"
-TMP_PATH="/run/user/$UID"
 
+# Change this if you want /tmp and /run/shm to be mapped to somewhere else.
+TMP_PATH="/run/user/$UID"
 mkdir -p "$TMP_PATH/archlinux/tmp/" "$TMP_PATH/archlinux/run/shm/"
 
 # Use bubblewrap (https://github.com/containers/bubblewrap)
