@@ -14,7 +14,7 @@
 CHROOT_PATH="$HOME/archlinux/root.x86_64"
 
 # Change this if bwrap and proot is installed to a different path,
-# for example, "$HOME/.local/opt/bubblewrap/bwrap".
+# for example, "$HOME/.local/opt/bubblewrap/usr/bin/bwrap", "$HOME/.local/bin/proot".
 BWRAP_PATH="bwrap"
 PROOT_PATH="proot"
 
