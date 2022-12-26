@@ -19,8 +19,8 @@ BWRAP_PATH="bwrap"
 PROOT_PATH="proot"
 
 # Change this if you want /tmp and /run/shm to be mapped to somewhere else.
-TMP_PATH="/run/user/$(id -ru)"
-mkdir -p "$TMP_PATH/archlinux/tmp/" "$TMP_PATH/archlinux/run/shm/"
+TMP_PATH="/run/user/$(id -ru)/archlinux"
+mkdir -p "$TMP_PATH/tmp/" "$TMP_PATH/run/shm/"
 
 # Use bubblewrap (https://github.com/containers/bubblewrap)
 exec "$BWRAP_PATH" --unshare-user-try --unshare-ipc --unshare-pid --unshare-uts --unshare-cgroup-try --hostname archlinux --dev-bind "$CHROOT_PATH" / --dev-bind / /mnt/outside --dev-bind /sys /sys --dev-bind "$TMP_PATH/archlinux/tmp" /tmp --dev-bind "$TMP_PATH/archlinux/run/shm" /run/shm --dev /dev --proc /proc "$@"
