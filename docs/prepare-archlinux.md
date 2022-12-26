@@ -52,6 +52,7 @@
     # pacman-key --init
     # pacman-key --populate archlinux
     # pacman -Sy archlinux-keyring
+    # pacman-key --populate archlinux
     # pacman -Su
     ```
 
