@@ -54,9 +54,12 @@
     # pacman -Sy archlinux-keyring
     # pacman-key --populate archlinux
     # pacman -Su
+    # pacman -S --needed base-devel vim
     ```
 
 10. Inside the chroot, install “[fake-sudo](https://aur.archlinux.org/packages/fake-sudo)” from AUR.
+
+    (Note: `makepkg` refuses to work if it detects itself to be root. You might need to modify its source code to bypass the check.)
 
     After that, you can use your usual UID/GID, and use `sudo` to give you fakeroot.
 
