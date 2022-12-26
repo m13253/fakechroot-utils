@@ -2,7 +2,7 @@
 
 Chroot without root privilege on shared system.
 
-Suitable for setting up your work environment on a shared lab machine, running old Ubuntu or CentOS.
+Suitable for setting up your work environment on a shared machine in an academic lab, running old Ubuntu or CentOS.
 
 ## Index
 
