@@ -29,4 +29,4 @@ exec "$BWRAP_PATH" --unshare-user-try --unshare-ipc --unshare-pid --unshare-uts 
 # It has lower performance than bubblewrap.
 # Note 1: If the host machine does not have /run/shm, remove "-b /run/shm".
 # Note 2: For SIGSEGV issue, check https://github.com/proot-me/proot/issues/336 (December 2022).
-exec "$PROOT_PATH" -r "$CHROOT_PATH" -b /:/mnt/outside -b /dev/ -b /sys/ -b /proc/ -b "$TMP_PATH/archlinux/tmp/":/tmp/ -b "$TMP_PATH/archlinux/run/shm/":/run/shm "$@"
+exec "$PROOT_PATH" -r "$CHROOT_PATH" -b /:/mnt/outside -b /dev/ -b /sys/ -b /proc/ -b "$TMP_PATH/archlinux/tmp/":/tmp/ -b "$TMP_PATH/archlinux/run/shm/":/run/shm/ "$@"
