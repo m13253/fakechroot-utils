@@ -19,7 +19,7 @@ BWRAP_PATH="bwrap"
 PROOT_PATH="proot"
 
 # Change this if you want /tmp and /run/shm to be mapped to somewhere else.
-TMP_PATH="/run/user/$UID"
+TMP_PATH="/run/user/$(id -ru)"
 mkdir -p "$TMP_PATH/archlinux/tmp/" "$TMP_PATH/archlinux/run/shm/"
 
 # Use bubblewrap (https://github.com/containers/bubblewrap)
