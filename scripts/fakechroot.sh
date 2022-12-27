@@ -29,4 +29,9 @@ exec "$BWRAP_PATH" --unshare-user-try --unshare-ipc --unshare-pid --unshare-uts 
 # It has lower performance than bubblewrap.
 # Note 1: If the host machine does not have /run/shm, remove "-b /run/shm".
 # Note 2: For SIGSEGV issue, check https://github.com/proot-me/proot/issues/336 (December 2022).
+# Note 3: If, during pacman installation, you see the error:
+#         proot: ./path/path.c:547: compare_paths2: Assertion `length2 > 0' failed.
+#         Try to edit $CHROOT_PATH/usr/lib/tmpfiles.d/dbus.conf and comment the line:
+#         L /var/lib/dbus/machine-id - - - - /etc/machine-id
+#         Then, remove the file $CHROOT_PATH/var/lib/pacman/db.lck if exists, and retry.
 exec "$PROOT_PATH" -r "$CHROOT_PATH" -b /:/mnt/outside -b /dev/ -b /sys/ -b /proc/ -b "$TMP_PATH/tmp/":/tmp/ -b "$TMP_PATH/run/shm/":/run/shm/ "$@"
