@@ -2,7 +2,7 @@ If you use proot backend, when you install packages with `pacman`, you might see
 ```
 proot: ./path/path.c:547: compare_paths2: Assertion `length2 > 0` failed.
 ```
-After that, poot quits, killing all child processes.
+After that, poot quits, killing all child processes. ([Related issue](https://github.com/proot-me/proot/issues/182))
 
 Try to edit `$CHROOT_PATH/usr/lib/tmpfiles.d/dbus.conf` and comment out the following line:
 ```
