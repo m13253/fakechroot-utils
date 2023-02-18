@@ -38,7 +38,7 @@ Suitable for setting up your work environment on a shared machine in an academic
 6. **Issue:** `pacman` produces error message: “proot: ./path/path.c:547: compare_paths2: Assertion `length2 > 0` failed.”
 
    **Docs:**
-   * [docs/proot-compare_paths2.md](docs/proot-compare_paths2.md]
+   * [docs/proot-compare_paths2.md](docs/proot-compare_paths2.md)
 
 ## License
 
