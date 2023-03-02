@@ -23,7 +23,7 @@
 
 7.  Prepare either the program “[bubblewrap](https://github.com/containers/bubblewrap)” or “[proot](https://proot-me.github.io/)” outside the chroot.
 
-    If it is not installed by your system administrator, you may statically compile it yourself, or extract it from a DEB file from [packages.ubuntu.com](https://packages.ubuntu.com/).
+    If it is not installed by your system administrator, you may [statically compile it yourself](bwrap-static-build.md), or extract it from a DEB file from [packages.ubuntu.com](https://packages.ubuntu.com/).
 
     * **Bubblewrap** relies on Linux kernel namespace feature, which may not be available on older systems, or not enabled to you.
 
