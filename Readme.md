@@ -15,6 +15,8 @@ Suitable for setting up your work environment on a shared machine in an academic
    * [scripts/fakechroot.sh](scripts/fakechroot.sh)
 
 2. **Task:** Build bubblewrap statically.
+
+   **Docs:**
    * [docs/bwrap-static-build.md](docs/bwrap-static-build.md)
 
 3. **Task:** Clearing up environment variable passed from outside the chroot.
