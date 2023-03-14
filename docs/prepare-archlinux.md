@@ -43,7 +43,7 @@
       **Runtime dependencies:**
       * None, statically linked.
 
-8.  Use this `fakechroot.sh` script, but add either `--uid 0 --gid 0` for bubblewrap backend, or `-0` for proot backend, in order to also give you fakeroot.
+8.  Use this `fakechroot.sh` script, but add either `--uid 0 --gid 0` for bubblewrap backend, or `-0` for proot backend, in order to also temporarily give you fakeroot before you get fake-sudo installed.
 
 9.  Inside the chroot, run:
 
