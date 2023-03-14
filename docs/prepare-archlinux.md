@@ -63,6 +63,8 @@
 
     After that, you can use your usual UID/GID, and use `sudo` to give you fakeroot.
 
-    You can also use `fakeroot` if fake-sudo doesn’t work.
+    You can also use another package called `fakeroot`, if fake-sudo doesn’t work.
+
+    After that, you can remove the `--uid 0 --gid 0` or `-0` options from the `fakechroot.sh` script.
 
 11. If you benefit from this program, consider writing a blog post to introduce this method.
