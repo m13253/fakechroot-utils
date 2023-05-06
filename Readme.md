@@ -25,22 +25,28 @@ Suitable for setting up your work environment on a shared machine in an academic
    * [scripts/clear-env.bash](scripts/clear-env.bash)
    * [scripts/clear-env.fish](scripts/clear-env.fish)
 
-4. **Task:** Use Visual Studio Code to connect to the remote chroot environment via SSH.
+4. **Task:** Share NVIDIA GPU devices with the chroot environment.
+
+   **Docs:**
+   * [scripts/link-nvidia.bash](scripts/link-nvidia.bash)
+   * [scripts/link-nvidia.fish](scripts/link-nvidia.fish)
+
+5. **Task:** Use Visual Studio Code to connect to the remote chroot environment via SSH.
 
    **Docs:**
    * [docs/vscode-remote.md](docs/vscode-remote.md)
 
-5. **Issue:** `man` shows error message: “error while loading shared libraries”
+6. **Issue:** `man` shows error message: “error while loading shared libraries”
 
    **Docs:**
    * [docs/man-apparmor.md](docs/man-apparmor.md)
 
-6. **Issue:** Proot does nothing; with arguments `-v 1`, it shows “proot info: vpid 1: terminated with signal 11”.
+7. **Issue:** Proot does nothing; with arguments `-v 1`, it shows “proot info: vpid 1: terminated with signal 11”.
 
    **Docs:**
    * [docs/proot-no-seccomp.md](docs/proot-no-seccomp.md)
 
-7. **Issue:** `pacman` produces error message: “proot: ./path/path.c:547: compare_paths2: Assertion `length2 > 0` failed.”
+8. **Issue:** `pacman` produces error message: “proot: ./path/path.c:547: compare_paths2: Assertion `length2 > 0` failed.”
 
    **Docs:**
    * [docs/proot-compare_paths2.md](docs/proot-compare_paths2.md)
