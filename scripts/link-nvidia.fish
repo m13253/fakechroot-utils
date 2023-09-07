@@ -6,7 +6,7 @@
 #
 # Since the /dev directory is not shared between different calls to fakechroot.sh,
 # we need to create the symbolic links every time we enter the chroot environment.
-# To do this, write "source link-nvidia.fish" in your ~/.config/fish/config.fish file.
+# To do this, put this script to ~/.config/fish/conf.d/ directory.
 
 for i in /mnt/outside/dev/nvidia*
     if test ! -e /dev/(basename $i)
