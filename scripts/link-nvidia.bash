@@ -15,3 +15,9 @@ do
         ln -s "$i" "/dev/$(basename "$i")"
     fi
 done
+
+# Solves the "Failed to initialize NVML: Driver/library version mismatch" problem
+mkdir -p /usr/local/lib/nvidia
+ln -fs /mnt/outside/lib/x86_64-linux-gnu/libcuda.so.1 /usr/local/lib/nvidia/libcuda.so.1
+ln -fs /mnt/outside/lib/x86_64-linux-gnu/libnvidia-ml.so.1 /usr/local/lib/nvidia/libnvidia-ml.so.1
+export LD_LIBRARY_PATH="$(/usr/bin/python3 -c 'import os, sys; p = sys.argv[2].split(chr(58)); print(chr(58).join(p + [i for i in os.getenv(sys.argv[1], str()).split(chr(58)) if i and i not in p]))' LD_LIBRARY_PATH /usr/local/lib/nvidia)"
