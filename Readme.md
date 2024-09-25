@@ -59,6 +59,18 @@ Suitable for setting up your work environment on a shared machine in an academic
    **Docs:**
    * [docs/proot-compare_paths2.md](docs/proot-compare_paths2.md)
 
+10. **Issue:** `makepkg` hangs on `fakeroot`.
+
+   **Solution:**
+   * Reduce `ulimit -n` down to 1024.
+   * <https://github.com/moby/moby/issues/27195>
+   * <https://github.com/greyltc-org/docker-archlinux-aur/issues/7>
+
+11. **Issue:** `pacman` v7.0 produces error message: “error: failed to synchronize all databases (unexpected error)”
+
+   **Solution:**
+   * Comment out `DownloadUser = alpm` from `/etc/pacman.conf`.
+
 ## License
 
 Licensed under WTFPL, version 2.
