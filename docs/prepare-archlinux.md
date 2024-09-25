@@ -21,6 +21,12 @@
     $HOME/archlinux/root.x86_64/etc/resolv.conf
     ```
 
+    In the file `$HOME/archlinux/root.x86_64/etc/pacman.conf`, comment out the following line:
+
+    ```
+    DownloadUser = alpm
+    ```
+
 7.  Prepare either the program “[bubblewrap](https://github.com/containers/bubblewrap)” or “[proot](https://proot-me.github.io/)” outside the chroot.
 
     If it is not installed by your system administrator, you may [statically compile it yourself](bwrap-static-build.md), or extract it from a DEB file from [packages.ubuntu.com](https://packages.ubuntu.com/).
