@@ -23,7 +23,7 @@ TMP_PATH="/run/user/$(id -ru)/archlinux"
 mkdir -p "$TMP_PATH/tmp/" "$TMP_PATH/run/shm/"
 
 # Use bubblewrap (https://github.com/containers/bubblewrap)
-exec "$BWRAP_PATH" --unshare-user-try --unshare-ipc --unshare-pid --unshare-uts --unshare-cgroup-try --hostname archlinux --dev-bind "$CHROOT_PATH" / --dev-bind / /mnt/outside --dev-bind /sys /sys --dev-bind "$TMP_PATH/tmp" /tmp --dev-bind "$TMP_PATH/run/shm" /run/shm --dev /dev --proc /proc "$@"
+exec "$BWRAP_PATH" --unshare-user-try --unshare-ipc --unshare-pid --unshare-uts --unshare-cgroup-try --hostname archlinux --dev-bind "$CHROOT_PATH" / --dev-bind / /mnt/outside --dev-bind /sys /sys --dev-bind "$TMP_PATH/tmp" /tmp --dev-bind "$TMP_PATH/run/shm" /run/shm --dev /dev --proc /proc --cap-add ALL "$@"
 
 # If bubblewrap is unavailable, try proot (https://proot-me.github.io/)
 # It has lower performance than bubblewrap.
