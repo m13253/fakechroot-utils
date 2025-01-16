@@ -35,7 +35,9 @@
 
       **Build dependencies:**
       * cmake
-      * meson (Optional)
+      * meson
+      * ninja
+      * pkg-config
 
       **Runtime dependencies:**
       * glibc
