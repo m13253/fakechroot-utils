@@ -4,6 +4,8 @@ Chroot without root privilege on shared system.
 
 Suitable for setting up your work environment on a shared machine in an academic lab, running old Ubuntu or CentOS.
 
+https://github.com/m13253/fakechroot-utils
+
 ## Index
 
 1. **Task:** Preparing an ArchLinux chroot environment.
