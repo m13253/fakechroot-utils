@@ -3,6 +3,8 @@
 # Chroot without root privilege on shared system.
 # Suitable for setting up your work environment on a shared lab machine, running old Ubuntu or CentOS.
 
+# https://github.com/m13253/fakechroot-utils
+
 # Licensed under WTFPL, version 2.
 # License terms available at: http://www.wtfpl.net/about/
 
